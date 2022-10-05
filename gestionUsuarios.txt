@@ -39,3 +39,6 @@ COMANDOS
 | ver la informacion de los grupos
 	cat /etc/group
 
+AGREGAR UN USUARIO A UN GRUPO 
+	sudo gpasswd -a carlos ventas
+
