@@ -16,10 +16,10 @@ Usuarios y grupos: Gestionar los derechos y permisos
 
 FICHEROS DE CONFIGURACION
 
-/HOME 		: Es el directorio de inicio del usuario
+/HOME 			: Es el directorio de inicio del usuario
 /etc/passwd 	: Las cuentas y contraseñas para un usuario
-/etc/group 	: El grupo al que pertenesco
-/etc/shadow	: Archivo de contraseña cifrado
+/etc/group 		: El grupo al que pertenesco
+/etc/shadow		: Archivo de contraseña cifrado
 
 COMANDOS
 
@@ -29,15 +29,36 @@ COMANDOS
 - chage
 
 | useradd : ejemplo simple [-m] fuersa la creacion de su directorio si no existe
-	$ sudo useradd -m marco
+	$ sudo useradd -m *usuario*
+
 | passwd : ejemplo simple
-	$ sudo passwd marco
+	$ sudo passwd *usuario*
+
 | groupadd
 	$ sudo group add ventas
+
 | ver la informacion de cada usuario 
 	$ cat /etc/passwd
+
 | ver la informacion de los grupos
 	$ cat /etc/group
+
+| cambiar nombre de usuario 
+	$ sudo usermod  *newName* *name*
+	# usermod  *newName* *name*
+
+| eliminar usuarios
+	$ sudo userdel *usuario*
+
+| cambiar contraseña de un usuario
+	$ passwd *usuario*
+
+| eliminar contraseña de un usuario
+	$ passwd *usuario* --delete
+
+| añadir una contrase al usuario que no tiene contraseña
+	$ passwd
+
 
 AGREGAR UN USUARIO A UN GRUPO 
 	sudo gpasswd -a carlos ventas
