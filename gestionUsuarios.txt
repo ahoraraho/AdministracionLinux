@@ -29,16 +29,24 @@ COMANDOS
 - chage
 
 | useradd : ejemplo simple [-m] fuersa la creacion de su directorio si no existe
-	sudo useradd -m marco
+	$ sudo useradd -m marco
 | passwd : ejemplo simple
-	sudo passwd marco
+	$ sudo passwd marco
 | groupadd
-	sudo group add ventas
+	$ sudo group add ventas
 | ver la informacion de cada usuario 
-	cat /etc/passwd
+	$ cat /etc/passwd
 | ver la informacion de los grupos
-	cat /etc/group
+	$ cat /etc/group
 
 AGREGAR UN USUARIO A UN GRUPO 
 	sudo gpasswd -a carlos ventas
+
+INGRESAR COMO SUPER ADMINISTRADOR (root) de un usuario
+	-> una ves que nos nos encontramos en el usuario que tiene privilegios de root:
+		$ sudo su
+	-> ya dentro podomos crear usuarios o modificar archivos, dar permisos.
+	+ dar permisos a un usuario ya creado
+		# nano /etc/sudoers
+	+ destro del archivo en el campo root, añadimos al usuario con todos los permisos
 
